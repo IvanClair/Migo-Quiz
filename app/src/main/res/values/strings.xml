@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Migo Quiz</string>
+    <string name="button_text_quiz_1">Quiz 1</string>
+    <string name="button_text_quiz_2">Quiz 2</string>
 </resources>
