@@ -7,7 +7,43 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="personal.ivan.migo_quiz.view.HomeFragment"
+        android:name="personal.ivan.migo_quiz.feature.home.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_quiz1Fragment"
+            app:destination="@id/quiz1Fragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_quiz2ListFragment"
+            app:destination="@id/quiz2ListFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quiz1Fragment"
+        android:name="personal.ivan.migo_quiz.feature.quiz1.Quiz1Fragment"
+        android:label="Quiz1Fragment"
+        tools:layout="@layout/fragment_quiz_1" />
+
+    <fragment
+        android:id="@+id/quiz2ListFragment"
+        android:name="personal.ivan.migo_quiz.feature.quiz2.view.Quiz2ListFragment"
+        android:label="Quiz2ListFragment"
+        tools:layout="@layout/fragment_quiz_2_list">
+        <action
+            android:id="@+id/action_quiz2ListFragment_to_quiz2AddFragment"
+            app:destination="@id/quiz2AddFragment" />
+        <action
+            android:id="@+id/action_quiz2ListFragment_to_quiz2DetailsFragment"
+            app:destination="@id/quiz2DetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quiz2AddFragment"
+        android:name="personal.ivan.migo_quiz.feature.quiz2.view.Quiz2AddFragment"
+        android:label="Quiz2AddFragment"
+        tools:layout="@layout/fragment_quiz_2_add" />
+    <fragment
+        android:id="@+id/quiz2DetailsFragment"
+        android:name="personal.ivan.migo_quiz.feature.quiz2.view.Quiz2DetailsFragment"
+        android:label="Quiz2DetailsFragment"
+        tools:layout="@layout/fragment_quiz_2_details" />
 </navigation>

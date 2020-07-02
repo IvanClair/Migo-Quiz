@@ -1,16 +1,16 @@
-package personal.ivan.migo_quiz.view
+package personal.ivan.migo_quiz.feature.quiz2.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import personal.ivan.migo_quiz.databinding.FragmentHomeBinding
+import personal.ivan.migo_quiz.databinding.FragmentQuiz2AddBinding
 
-class HomeFragment : Fragment() {
+class Quiz2AddFragment : Fragment() {
 
     // View Binding
-    private lateinit var binding: FragmentHomeBinding
+    private lateinit var binding: FragmentQuiz2AddBinding
 
     // region Life Cycle
 
@@ -19,7 +19,7 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentHomeBinding.inflate(
+        binding = FragmentQuiz2AddBinding.inflate(
             inflater,
             container,
             false
