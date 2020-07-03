@@ -26,7 +26,7 @@
 
     <fragment
         android:id="@+id/quiz2ListFragment"
-        android:name="personal.ivan.migo_quiz.feature.quiz2.view.Quiz2ListFragment"
+        android:name="personal.ivan.migo_quiz.feature.quiz2.view.list.Quiz2ListFragment"
         android:label="Quiz2ListFragment"
         tools:layout="@layout/fragment_quiz_2_list">
         <action
@@ -45,5 +45,9 @@
         android:id="@+id/quiz2DetailsFragment"
         android:name="personal.ivan.migo_quiz.feature.quiz2.view.Quiz2DetailsFragment"
         android:label="Quiz2DetailsFragment"
-        tools:layout="@layout/fragment_quiz_2_details" />
+        tools:layout="@layout/fragment_quiz_2_details">
+        <argument
+            android:name="selectedModel"
+            app:argType="personal.ivan.migo_quiz.feature.quiz2.model.Quiz2ListVhBindingModel" />
+    </fragment>
 </navigation>

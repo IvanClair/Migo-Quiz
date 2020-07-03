@@ -2,4 +2,20 @@
     <string name="app_name">Migo Quiz</string>
     <string name="button_text_quiz_1">Quiz 1</string>
     <string name="button_text_quiz_2">Quiz 2</string>
+    <string name="label_pending">Pending</string>
+    <string name="label_available">Available</string>
+    <string name="label_expired">Expired</string>
+    <string name="label_pass">Pass</string>
+    <string name="button_text_activate">Activate</string>
+    <string name="label_activate_date_time">Activate Date Time</string>
+    <string name="label_due_date_time">Due Date Time</string>
+    <string name="button_text_day">Day</string>
+    <string name="button_text_hour">Hour</string>
+    <string name="button_text_add">Add</string>
+    <string name="hint_quiz2_type">Please select a type</string>
+    <string name="label_1">1</string>
+    <string name="label_4">4</string>
+    <string name="label_7">7</string>
+    <string name="label_16">16</string>
+    <string name="label_30">30</string>
 </resources>

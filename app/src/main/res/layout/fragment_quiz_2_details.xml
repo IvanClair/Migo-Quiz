@@ -1,6 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_view_pass"
+        style="@style/MyTextView.Headline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/label_pass" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_view_description"
+        style="@style/MyTextView.Subtitle1"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_pass"
+        tools:text="1 Day" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_view_status"
+        style="@style/MyTextView.Subtitle1"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_description"
+        tools:text="@string/label_available" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_view_activate_date_time_label"
+        style="@style/MyTextView.Caption"
+        android:layout_marginTop="32dp"
+        android:text="@string/label_activate_date_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_status" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_view_activate_date_time"
+        style="@style/MyTextView.Subtitle1"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_activate_date_time_label"
+        tools:text="Mon, 01 Jun 2020, 23:48" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_view_due_date_time_label"
+        style="@style/MyTextView.Caption"
+        android:layout_marginTop="32dp"
+        android:text="@string/label_due_date_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_activate_date_time" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_view_due_date_time"
+        style="@style/MyTextView.Subtitle1"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_due_date_time_label"
+        tools:text="Mon, 01 Jun 2020, 23:48" />
 </androidx.constraintlayout.widget.ConstraintLayout>

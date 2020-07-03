@@ -1,6 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_type_description"
+            style="@style/MyTextView.Caption"
+            android:layout_width="match_parent"
+            android:text="@string/hint_quiz2_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/group_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            app:checkedButton="@+id/button_day"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_type_description"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_day"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_text_day" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_hour"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_text_hour" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <RadioGroup
+            android:id="@+id/group_day"
+            style="@style/MyRadioGroup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/group_type">
+
+            <RadioButton
+                android:id="@+id/radio_day_1"
+                style="@style/MyRadioButton"
+                android:checked="true"
+                android:text="@string/label_1" />
+
+            <RadioButton
+                android:id="@+id/radio_day_7"
+                style="@style/MyRadioButton"
+                android:text="@string/label_7" />
+
+            <RadioButton
+                android:id="@+id/radio_day_30"
+                style="@style/MyRadioButton"
+                android:text="@string/label_30" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/group_hour"
+            style="@style/MyRadioGroup"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/group_type">
+
+            <RadioButton
+                android:id="@+id/radio_hour_1"
+                style="@style/MyRadioButton"
+                android:checked="true"
+                android:text="@string/label_1" />
+
+            <RadioButton
+                android:id="@+id/radio_hour_4"
+                style="@style/MyRadioButton"
+                android:text="@string/label_4" />
+
+            <RadioButton
+                android:id="@+id/radio_hour_16"
+                style="@style/MyRadioButton"
+                android:text="@string/label_16" />
+        </RadioGroup>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier_toggle_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="group_day,group_hour" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_view_value"
+            style="@style/MyTextView.Headline1"
+            android:layout_marginTop="16dp"
+            android:text="@string/label_1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barrier_toggle_bottom" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/button_text_add"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_value" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
