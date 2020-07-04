@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/quiz1Fragment"
-        android:name="personal.ivan.migo_quiz.feature.quiz1.Quiz1Fragment"
+        android:name="personal.ivan.migo_quiz.feature.quiz1.view.Quiz1Fragment"
         android:label="Quiz1Fragment"
         tools:layout="@layout/fragment_quiz_1" />
 
